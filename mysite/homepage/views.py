@@ -12,7 +12,7 @@ def index(request):
     return render(request, template_name="homepage/index.html", context=context)
 
 
-def get_category(request, category_id):
+def get_category(request, category_id: int):
     homepage = Homepage.objects.filter(category_id=category_id)
     category = Category.objects.all()
     categories = Category.objects.get(pk=category_id)
