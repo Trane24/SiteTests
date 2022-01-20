@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Homepage(models.Model):
+    """
+    Add news
+    """
     title = models.CharField(max_length=50, verbose_name="Наименование")
     content = models.TextField(blank=True, verbose_name="Контент")
     datatime = models.DateTimeField(auto_now_add=True, verbose_name="Дата загрузки")
